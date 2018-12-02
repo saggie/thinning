@@ -12,8 +12,18 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-#description {
+#guide {
   font-size: 500%;
   margin-top: 0;
   margin-bottom: 0;
+}
+#title {
+  font-size: 150%;
+  font-weight:bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+#description {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
