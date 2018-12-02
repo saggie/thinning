@@ -1,0 +1,19 @@
+html, body {
+  font-family: sans-serif;
+}
+#drop_zone {
+  height: 98%;
+  border: dashed 5px gray;
+  color: gray;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#description {
+  font-size: 500%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
