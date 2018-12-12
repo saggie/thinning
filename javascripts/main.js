@@ -2,6 +2,7 @@ THIN.main = (function () {
 
   var _onImageLoaded = function () {
     THIN.binalize.apply();
+    THIN.preparation1.apply();
     THIN.thinning1.apply();
     THIN.thinning2.apply();
     THIN.image_decoder.decode();

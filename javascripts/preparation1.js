@@ -1,4 +1,4 @@
-THIN.thinning2 = (function () {
+THIN.preparation1 = (function () {
 
   let width = 0;
   let height = 0;
@@ -22,10 +22,8 @@ THIN.thinning2 = (function () {
   };
 
   var _isConditionSatisfied = function (p2, p3, p4, p5, p6, p7, p8, p9) {
-    if (p2 && p4 && !p6 && !p7 && !p8) { return true; }
-    if (p4 && p6 && !p8 && !p9 && !p2) { return true; }
-    if (p6 && p8 && !p2 && !p3 && !p4) { return true; }
-    if (p8 && p2 && !p4 && !p5 && !p6) { return true; }
+    if (p2 && p6) { return true; }
+    if (p4 && p8) { return true; }
     return false;
   };
 
@@ -34,7 +32,7 @@ THIN.thinning2 = (function () {
 
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
-        if (_getValue(x, y) == false) {
+        if (_getValue(x, y) == true) {
           continue;
         }
 
@@ -48,7 +46,7 @@ THIN.thinning2 = (function () {
         const p9 = _getValue(x - 1, y - 1);
 
         if (_isConditionSatisfied(p2, p3, p4, p5, p6, p7, p8, p9)) {
-          data[_getAddress(x, y)] = false;
+          data[_getAddress(x, y)] = true;
         }
       }
     };
