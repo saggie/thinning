@@ -18,7 +18,7 @@ THIN.optionsManager = (function () {
       } else if (key == "resultColor") {
         THIN.options.resultColor = Number("0x" + value);
         console.log("resultColor=" + THIN.options.resultColor);
-      } else {
+      } else if (value) {
         console.warn("An unknown parameter '" + key + "=" + value + "' detected.");
       }
     }
