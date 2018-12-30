@@ -6,7 +6,7 @@ THIN.imageData = null;
 THIN.binaryData = null;
 
 THIN.options = {
-  targetColor: null,
+  thredhold: 127,
   resultColor: 0x000000,
   saveToClipboard: false
 };
