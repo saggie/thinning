@@ -15,10 +15,11 @@ THIN.image_decoder = (function () {
     resultImageData = context.createImageData(width, height);
   };
 
-  var _setValue = function (address, value) {
-    resultImageData.data[address * colorOffset + 0] = value;
-    resultImageData.data[address * colorOffset + 1] = value;
-    resultImageData.data[address * colorOffset + 2] = value;
+  var _setValue = function (address, hexValue) {
+    const rgb = THIN.colorUtil.toRgb(hexValue);
+    resultImageData.data[address * colorOffset + 0] = rgb[0];
+    resultImageData.data[address * colorOffset + 1] = rgb[1];
+    resultImageData.data[address * colorOffset + 2] = rgb[2];
     resultImageData.data[address * colorOffset + 3] = 255;
   };
 
@@ -26,7 +27,7 @@ THIN.image_decoder = (function () {
     _init();
 
     for (let address = 0; address < width * height; address++) {
-      const value = THIN.binaryData[address] ? 0 : 255;
+      const value = THIN.binaryData[address] ? THIN.options.resultColor : 0xffffff;
       _setValue(address, value);
     }
 

@@ -11,6 +11,7 @@ THIN.main = (function () {
   };
 
   var execute = function () {
+    THIN.optionsManager.setup();
     THIN.image_loader.load(_onImageLoaded);
   };
 

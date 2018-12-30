@@ -10,14 +10,16 @@
   <div id="drop_zone" draggable="true">
     <p id="guide">Drag & drop an image file here.</p>
     <p id="title">- Online Image Thining -</p>
-    <p id="description">This page applies Zhang-Suen thinning algorithm to a dropped image.<br> Note that your image file won't be uploaded:
-      it will be processed in the browser.</p>
+    <p id="description">This page applies Zhang-Suen thinning algorithm to a dropped image.<br> Note that your image
+      file won't be uploaded: it will be processed in the browser.</p>
   </div>
   <canvas id="canvas" hidden="true"></canvas>
   <a id="download"></a>
 
   <!-- Scripts -->
   <script src="javascripts/init.js"></script>
+  <script src="javascripts/options_manager.js"></script>
+  <script src="javascripts/color_util.js"></script>
   <script src="javascripts/drag_and_drop.js"></script>
   <script src="javascripts/image_loader.js"></script>
   <script src="javascripts/binalize.js"></script>
