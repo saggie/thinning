@@ -1,4 +1,4 @@
-THIN.preparation2 = (function () {
+THIN.preparation1 = (function () {
 
   let width = 0;
   let height = 0;
