@@ -1,4 +1,12 @@
+[Japanese](/README_ja.md)
+
 # Online Image Thinning
-It applies Zhang-Suen thinning algorithm to an image file.
+This page thins lines in an image file.
 
 https://saggie.github.io/thinning/
+
+## An example
+
+| Original image | Thinned image |
+|:-:|:-:|
+| ![](/www/images/lena.png)| ![](/www/images/lena_thin.png) |
