@@ -7,5 +7,6 @@ THIN.binaryData = null;
 
 THIN.options = {
   threshold: 127,
-  resultColor: 0x000000
+  resultColor: 0x000000,
+  mode: 1
 };

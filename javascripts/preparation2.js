@@ -1,4 +1,4 @@
-THIN.preparation1 = (function () {
+THIN.preparation2 = (function () {
 
   let width = 0;
   let height = 0;
@@ -26,25 +26,27 @@ THIN.preparation1 = (function () {
   var apply = function () {
     _init();
 
-    if (THIN.options.mode == 2) {
+    if (THIN.options.mode == 1) {
       return;
     }
 
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
 
-        const p1 = _getValue(x, y);
-        const p2 = _getValue(x, y - 1);
-        const p3 = _getValue(x + 1, y - 1);
-        const p4 = _getValue(x + 1, y);
-        const p5 = _getValue(x + 1, y + 1);
-        const p6 = _getValue(x, y + 1);
-        const p7 = _getValue(x - 1, y + 1);
-        const p8 = _getValue(x - 1, y);
-        const p9 = _getValue(x - 1, y - 1);
+        if (_getValue(x, y)) {
+          continue;
+        }
 
-        if (p1 && p2 && p3 && p4 && p5 && p6 && p7 && p8 && p9) {
-          currentData[_getAddress(x, y)] = false;
+        const p2 = _getValue(x, y - 1);
+        const p4 = _getValue(x + 1, y);
+        const p6 = _getValue(x, y + 1);
+        const p8 = _getValue(x - 1, y);
+
+        if (p2 && p6) {
+          currentData[_getAddress(x, y)] = true;
+        }
+        if (p4 && p8) {
+          currentData[_getAddress(x, y)] = true;
         }
       }
     };
